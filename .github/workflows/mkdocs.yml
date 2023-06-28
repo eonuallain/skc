@@ -13,5 +13,9 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+      - name: Install mkdocs
+        run: pip install mkdocs
       - name: GH deploy
         run: mkdocs gh-deploy
