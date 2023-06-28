@@ -1,8 +1,8 @@
 # SKC - Simple Kubernettes Client
 
 ## nav:
-    - Home: [index.md](./docs/index.md)
-    - About: [about.md](./docs/about.md)
+    - Home: [index.md](./index.md)
+    - About: [about.md](./about.md)
 
 For Linux based systems run the scripts in order in `.init-scripts/nix`
 ```
