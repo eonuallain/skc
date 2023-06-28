@@ -1,6 +1,11 @@
 name: Generate docs
 on:
   push:
+    branches: ["main"]
+    paths:
+      - mkdocs.yml
+      - docs/**
+      - .github/workflows/mkdocs.yml
 jobs:          
   docs:
     runs-on: ubuntu-latest
