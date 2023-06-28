@@ -2,10 +2,8 @@ name: Generate docs
 on:
   push:
 jobs:          
-
   docs:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
       - name: Check out code
         uses: actions/checkout@v3
