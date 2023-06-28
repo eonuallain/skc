@@ -1,9 +1,5 @@
 # SKC - Simple Kubernettes Client
 
-## nav:
-    - Home: [index.md](/docs/index.md)
-    - About: [about.md](docs/about.md)
-
 For Linux based systems run the scripts in order in `.init-scripts/nix`
 ```
 1-init-venv.sh

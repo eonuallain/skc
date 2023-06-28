@@ -1,7 +1,7 @@
 site_name: Simple Kubernetes Client
-
+repo_url: https://github.com/eonuallain/skc/
 nav:
-    - Home: index.md
-    - About: about.md
+    - Home: 'index.md'
+    - About: 'about.md'
 
 theme: readthedocs
