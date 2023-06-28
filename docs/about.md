@@ -1,3 +1,3 @@
-# SKC - Simple Kubernettes Client
+# About
 
 About page

@@ -1,14 +1,18 @@
-# SKC - Simple Kubernettes Client
+# Home
 
 For Linux based systems run the scripts in order in `.init-scripts/nix`
 ```
 1-init-venv.sh
+export venv_dir=~/venv/skc 
+source $venv_dir/bin/activate
 2-install-wxpython.sh
 ```
 
 For Windows systems run the scripts in order in `.init-scripts\win`
 ```
 1-init-venv.bat
+set venv_dir=%USERPROFILE%\venv\skc
+%venv_dir%\Scripts\activate
 2-install-wxpython.bat
 ```
 
