@@ -1,5 +1,7 @@
 site_name: Simple Kubernetes Client
+
 nav:
-  - Home: index.md
-  - About: about.md
+    - Home: index.md
+    - About: about.md
+
 theme: readthedocs
