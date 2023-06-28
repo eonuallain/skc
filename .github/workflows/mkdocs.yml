@@ -6,15 +6,19 @@ on:
       - mkdocs.yml
       - docs/**
       - .github/workflows/mkdocs.yml
-jobs:          
-  docs:
+jobs:
+  build:
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 'pypy-3.6'
+
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        uses: afritzler/mkdocs-gh-pages-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_DOCS }}
-          CONFIG_FILE: mkdocs.yml
-     
