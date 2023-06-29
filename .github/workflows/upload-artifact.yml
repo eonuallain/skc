@@ -1,0 +1,21 @@
+name: Upload artifact
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  upload-artifact:    
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash    
+    steps:
+    - name: Create a file
+      run: |
+        env | sort > sample_env.txt
+        echo "sample file" > sample_file.txt        
+        zip files-${{github.run_number}}.zip sample_*.txt
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: sample-artifact-${{github.run_number}}
+        path: files-${{github.run_number}}.zip
