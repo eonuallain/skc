@@ -1,0 +1,15 @@
+name: Lint source code
+on:
+  push:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create a file
+      run: echo "short lived file" > short_lived_file.txt
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: short-lived-artifact
+        path: short_lived_file.txt
+        retention-days: 1
