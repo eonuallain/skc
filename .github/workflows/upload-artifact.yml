@@ -2,7 +2,7 @@ name: Upload artifact
 on:
   push:
 jobs:
-  lint:
+  upload-artifact:
     runs-on: ubuntu-latest
     steps:
     - name: Create a file
