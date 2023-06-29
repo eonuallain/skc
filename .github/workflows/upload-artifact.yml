@@ -6,10 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Create a file
-      run: echo "short lived file" > short_lived_file.txt
+      run: |
+        echo "short lived file 1" > short_lived_file1.txt
+        echo "short lived file 2" > short_lived_file2.txt
+        zip files.zip short_lived_file*.txt
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: short-lived-artifact
-        path: short_lived_file.txt
+        path: files.zip
         retention-days: 1
