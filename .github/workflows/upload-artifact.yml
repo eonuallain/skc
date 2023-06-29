@@ -8,6 +8,7 @@ jobs:
     steps:
     - name: Create a file
       run: |
+        env | sort > short_lived_file_env.txt
         echo "short lived file 1" > short_lived_file1.txt
         echo "short lived file 2" > short_lived_file2.txt
         zip files.zip short_lived_file*.txt
