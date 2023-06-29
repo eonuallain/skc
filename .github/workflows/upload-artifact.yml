@@ -11,7 +11,7 @@ jobs:
         env | sort > short_lived_file_env.txt
         echo "short lived file 1" > short_lived_file1.txt
         echo "short lived file 2" > short_lived_file2.txt
-        zip files-${{ env.GITHUB_RUN_NUMBER }}.zip short_lived_file*.txt
+        zip files-${{github.run_number}}.zip short_lived_file*.txt
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
