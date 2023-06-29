@@ -15,6 +15,6 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: short-lived-artifact
-        path: files-${{ env.GITHUB_RUN_NUMBER }}.zip
+        name: short-lived-artifact-${{github.run_number}}
+        path: files-${{github.run_number}}.zip
         retention-days: 1
