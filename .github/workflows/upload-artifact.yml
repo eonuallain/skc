@@ -1,6 +1,7 @@
 name: Upload artifact
 on:
   push:
+  workflow_dispatch:
 jobs:
   upload-artifact:
     runs-on: ubuntu-latest
