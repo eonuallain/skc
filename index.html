@@ -75,19 +75,9 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="home">Home</h1>
-<p>For Linux based systems run the scripts in order in <code>.init-scripts/nix</code></p>
-<pre><code>1-init-venv.sh
-export venv_dir=~/venv/skc 
-source $venv_dir/bin/activate
-2-install-wxpython.sh
-</code></pre>
-<p>For Windows systems run the scripts in order in <code>.init-scripts\win</code></p>
-<pre><code>1-init-venv.bat
-set venv_dir=%USERPROFILE%\venv\skc
-%venv_dir%\Scripts\activate
-2-install-wxpython.bat
-</code></pre>
-<p>Either way you now be able to run the <code>main.py</code> file, which shows a frame:</p>
+<p>For Linux based systems run with <code>make</code> in the top-level directory.</p>
+<p>For Windows systems run with <code>make -f Makefile.win</code> in the top-level directory.</p>
+<p>You can also run the <code>main.py</code> file, which shows a frame:</p>
 <pre><code>python main.py
 </code></pre>
               
@@ -141,5 +131,5 @@ set venv_dir=%USERPROFILE%\venv\skc
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-06-28 16:54:14.156350+00:00
+Build Date UTC : 2023-07-08 22:34:07.818865+00:00
 -->
