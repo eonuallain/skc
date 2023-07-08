@@ -1,0 +1,23 @@
+.ONESHELL:
+
+.DEFAULT_GOAL := run
+
+PYTHON = ./venv/Scripts/python
+PIP = ./venv/Scripts/pip
+
+venv/Scripts/activate : requirements.txt
+	python -m venv venv
+	chmod +x venv/Scripts/activate
+	. ./venv/Scripts/activate
+	${PIP} install -r requirements.txt
+
+venv: venv/Scripts/activate
+	. ./venv/Scripts/activate
+run: venv 
+	${PYTHON} src/main.py
+
+clean:
+	rm -rf __pycache__
+	rm -rf venv
+
+.PHONY: run clean
