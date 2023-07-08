@@ -1,3 +1,4 @@
+plugins: []
 site_name: Simple Kubernetes Client
 repo_url: https://github.com/eonuallain/skc/
 docs_dir: docs
