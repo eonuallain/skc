@@ -2,17 +2,17 @@
 
 .DEFAULT_GOAL := run
 
-PYTHON = ./venv/Scripts/python
-PIP = ./venv/Scripts/pip
+PYTHON = venv/Scripts/python
+PIP = venv/Scripts/pip
 
 venv/Scripts/activate : requirements.txt
 	python -m venv venv
-	chmod +x venv/Scripts/activate
-	. ./venv/Scripts/activate
+	venv/Scripts/activate.bat
 	${PIP} install -r requirements.txt
 
 venv: venv/Scripts/activate
-	. ./venv/Scripts/activate
+	venv\Scripts\activate.bat
+
 run: venv 
 	${PYTHON} src/main.py
 
