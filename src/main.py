@@ -46,9 +46,13 @@ class SKCFrame(wx.Frame):
         item = event.GetItem()
         try:
             item_text = self.tree.GetItemText(item)
+            if "Pods" == item_text:
+                print("### list pods")
+            if "Nodes" == item_text:
+                print("### list nodes")
             self.display.SetLabel(item_text)
         except RuntimeError:
-            # ignore runtime error when shutting down, underlying C++ are gone
+            # ignore runtime error when shutting down, underlying C++ objects are gone
             pass
 
 

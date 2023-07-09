@@ -2,6 +2,7 @@ import os
 import yaml
 
 KUBECONFIG = 'KUBECONFIG'
+CONFIG = 'config'
 
 
 def config_defined():
@@ -14,7 +15,7 @@ def get_config_path():
 
 def get_default_config_path():
     home = os.path.expanduser('~')
-    config_path = os.path.join(home, '.kube', 'config')
+    config_path = os.path.join(home, '.kube', CONFIG)
     return config_path
 
 
