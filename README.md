@@ -1,3 +1,3 @@
-# SKC - Simple Kubernettes Client
+# SKC - Simple Kubernetes Client
 
 See https://eonuallain.github.io/skc/
